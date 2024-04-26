@@ -73,4 +73,11 @@ int main() {
     // errado! 8 bytes. arquitetura 64 bits tem endereco de memoria de 8 bytes por padrao,
     // mesmo que o hexadecimal no meu sistema va ate 10 dígitos (5 bytes)
 
+    // desreferenciar um ponteiro eh o que permite acessar ou escrever naquele endereco de memoria
+    int deref = 4;
+    int* pont = &deref;
+    std::cout << "antes era " << *pont << std::endl; // leio do endereco
+    *pont = 5; // re-escrevo sobre o endereco
+    std::cout << "agora eh " << *pont << std::endl;
+
 }
